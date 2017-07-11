@@ -1,0 +1,31 @@
+package View;
+
+import javax.swing.JFrame;
+
+import Controller.keylistener;
+
+public class Window extends JFrame {
+
+
+private keylistener detKey = new DetectKey();
+private WinPanel wp= new WinPanel();
+public Window() { 
+    this.setTitle("MentalKombat");
+    this.setSize(1080, 720);
+    this.setResizable(false); 
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    this.setLocationRelativeTo(null);
+    this.addKeyListener(detKey);
+    this.setFocusable(true);
+    this.add(wp);
+}
+
+public keylistener getDetKey(){
+	return detKey;
+}
+
+public WinPanel getWP(){
+	return wp;
+}
+
+}

@@ -1,0 +1,41 @@
+package Controller;
+
+import View.Window;
+
+public class Event {
+	private int Key;
+	private Window win;
+	private Character p1;
+	private Character p2;
+
+	private boolean p2DidSpe=false;
+	private boolean p1DidSpe=false;
+
+	/*
+	 * A == 65
+	 * Z == 90
+	 * E == 69
+	 */
+	public Event(keyNum,wind,p,pp) { 
+		Key = keyNum;
+		win = wind;
+		p1 = p;
+		p2 = pp;
+		if(p1didspe){
+			p1DidSpe=true;
+		}
+		if(bool){
+			p2DidSpe=true;
+		}
+		if (Key==65){//depending on the keystroke, it chooses the action
+			this.attackAction();
+		}
+		if (Key==90){
+			this.blocAction();
+		}
+		if (Key==69){
+			this.spePowAction();
+		}
+		
+		
+}

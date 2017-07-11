@@ -1,0 +1,15 @@
+package Model;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class Damager extends Character{
+	public Damager(int px, int py) throws IOException { // damager position
+	x=px;
+	y=py;
+	img = ImageIO.read(new File()); // import image
+	lifePoints = 3;
+}
+}

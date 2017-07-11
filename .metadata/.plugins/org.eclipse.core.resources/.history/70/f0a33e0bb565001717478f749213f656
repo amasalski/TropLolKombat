@@ -1,0 +1,40 @@
+package Controller;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+import Model.Healer;
+import Model.Damager;
+import Model.Tank;
+import View.Window;
+
+public class GameLoop {
+	@SuppressWarnings("unused")
+	private Window win = new Window();
+	private Damager P1;
+	private Damager P2;
+	public GameLoop(){
+		this.loop();
+	}
+	public void loop(){
+		try {
+			P1 = new Damager(200,200);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			P2 = new Damager(500,500);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}		
+		while (true){
+			try {
+				TimeUnit.MILLISECONDS.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		}
+	}

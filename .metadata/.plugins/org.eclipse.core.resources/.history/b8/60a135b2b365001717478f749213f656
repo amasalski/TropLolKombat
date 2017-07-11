@@ -1,0 +1,23 @@
+package Controller;
+
+import java.util.concurrent.TimeUnit;
+
+import View.Window;
+
+public class GameLoop {
+	@SuppressWarnings("unused")
+	private Window win = new Window();
+	public GameLoop(){
+		this.loop();
+	}
+	public void loop(){
+		while (true){
+			try {
+				TimeUnit.MILLISECONDS.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		}
+	}

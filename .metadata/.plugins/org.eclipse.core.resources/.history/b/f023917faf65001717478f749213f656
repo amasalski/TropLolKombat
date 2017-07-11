@@ -1,0 +1,33 @@
+package View;
+
+import javax.swing.JFrame;
+
+import Controller.keylistener;
+
+@SuppressWarnings("serial")
+public class Window extends JFrame {
+
+
+private keylistener detKey = new keylistener();
+private WinPan wp= new WinPan();
+public Window() { 
+	System.out.println("Hello World");
+    this.setTitle("TropLolKombat");
+    this.setSize(1080, 720);
+    this.setResizable(false); 
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    this.setLocationRelativeTo(null);
+    this.addKeyListener(detKey);
+    this.setFocusable(true);
+    this.add(wp);
+}
+
+public keylistener getDetKey(){
+	return detKey;
+}
+
+public WinPan getWP(){
+	return wp;
+}
+
+}

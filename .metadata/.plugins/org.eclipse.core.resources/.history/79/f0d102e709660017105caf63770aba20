@@ -1,0 +1,53 @@
+package Controller;
+
+import Model.Damager;
+import View.Window;
+
+public class Event {
+	private int Key;
+	private Window win;
+	private Damager p1;
+	private Damager p2;
+
+	private boolean p2DidSpe=false;
+	private boolean p1DidSpe=false;
+
+	/*
+	 * A == 65
+	 * Z == 90
+	 * E == 69
+	 */
+	public Event(int keyNum, Window wind, Damager p, Damager pp) { 
+		Key = keyNum;
+		win = wind;
+		p1 = p;
+		p2 = pp;
+
+		if (Key==65){//depending on the keystroke, it chooses the action
+			this.attackAction();
+		}
+		if (Key==90){
+			this.blocAction();
+		}
+		if (Key==69){
+			this.spePowAction();
+		}
+		
+		
+	}
+
+	private void spePowAction() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void blocAction() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void attackAction() {
+		// TODO Auto-generated method stub
+		
+	}
+}

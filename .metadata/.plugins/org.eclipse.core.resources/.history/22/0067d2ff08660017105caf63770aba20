@@ -1,0 +1,50 @@
+package View;
+
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+
+@SuppressWarnings("serial")
+public class WinPan extends JPanel {
+	public void paint(Graphics g){
+	super.paint(g);
+	Graphics2D g2d = (Graphics2D) g;
+	try {
+		Image img;
+		img = ImageIO.read(new File("src/Image/background.png"));// display the background img
+		g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+
+		for (int i=0; i<characters.size(); i++){ //loop to display the characters
+			Character tempPlayer = characters.get(i);
+			g2d.drawImage(tempPlayer.getImage(), tempPlayer.getX(), tempPlayer.getY(), this);
+			
+		}
+		
+		if(end==1){ //depending on the end, it draws the different imgs
+			img = ImageIO.read(new File("src/Image/tie.png"));
+			g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this); 
+			
+		}
+		if(end==2){
+			img = ImageIO.read(new File("src/Image/game_over.png"));
+			g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+		}
+		if(end==3){
+			img = ImageIO.read(new File("src/Image/gg.png"));
+			g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+		}
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	}
+}
+

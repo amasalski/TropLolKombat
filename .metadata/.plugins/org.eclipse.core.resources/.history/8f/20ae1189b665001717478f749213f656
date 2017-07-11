@@ -1,0 +1,28 @@
+package View;
+
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class WinPan extends JPanel {
+	public void paint(Graphics g){
+	super.paint(g);
+	Graphics2D g2d = (Graphics2D) g;
+	try {
+		Image img;
+		img = ImageIO.read(new File("src/Image/background"));// display the background img
+		g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+
+		
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	}
+}
+

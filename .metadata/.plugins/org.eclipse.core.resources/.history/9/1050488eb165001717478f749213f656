@@ -1,0 +1,18 @@
+package View;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class WinPan extends JPanel {
+	Image img = ImageIO.read(new File("src/Image/Jinx"));
+	public void paint(Graphics g){
+	super.paint(g);
+	g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+	img = ImageIO.read(new File("src/Image/Jinx"));
+}
+}

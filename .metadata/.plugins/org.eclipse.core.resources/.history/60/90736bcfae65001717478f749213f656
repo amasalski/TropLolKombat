@@ -1,0 +1,14 @@
+package Controller;
+
+import View.Window;
+
+public class GameLoop {
+	private Window win = new Window();
+	public GameLoop(){
+		this.loop();
+	}
+	public void loop(){
+		while (true){
+	}
+	}
+}

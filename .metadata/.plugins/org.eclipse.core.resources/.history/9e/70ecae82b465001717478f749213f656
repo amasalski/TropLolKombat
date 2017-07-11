@@ -1,0 +1,27 @@
+package Controller;
+
+import java.util.concurrent.TimeUnit;
+
+import Model.Damager;
+import Model.Tank;
+import View.Window;
+
+public class GameLoop {
+	@SuppressWarnings("unused")
+	private Window win = new Window();
+	private Tank P1 = new Tank(0, 0);
+	private Damager P2 = new Damager(720, 0);
+	public GameLoop(){
+		this.loop();
+	}
+	public void loop(){
+		while (true){
+			try {
+				TimeUnit.MILLISECONDS.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		}
+	}
